@@ -1,0 +1,81 @@
+{
+  "split_date": "2021-01-01 00:00:00+00:00",
+  "target_keywords": [
+    "Diabetes",
+    "Prediabetes",
+    "Hypertens",
+    "Hyperlipidemia",
+    "Coronary",
+    "Ischemic heart",
+    "Heart failure"
+  ],
+  "criteria": {
+    "HTN": {
+      "feat": "sbp",
+      "agg": "max",
+      "threshold": 140.0,
+      "direction": ">="
+    },
+    "HYPERGLY": {
+      "feat": "hba1c",
+      "agg": "max",
+      "threshold": 6.5,
+      "direction": ">="
+    },
+    "HYPERGLU": {
+      "feat": "glucose",
+      "agg": "max",
+      "threshold": 126.0,
+      "direction": ">="
+    },
+    "DYSLIP": {
+      "feat": "ldl",
+      "agg": "max",
+      "threshold": 160.0,
+      "direction": ">="
+    },
+    "OBESITY": {
+      "feat": "bmi",
+      "agg": "max",
+      "threshold": 30.0,
+      "direction": ">="
+    }
+  },
+  "min_criteria": 2,
+  "thresholds_f1_optimal": {
+    "decision_tree": 0.75,
+    "svm": 0.49999999999999994,
+    "mlp": 0.3
+  },
+  "obs_features": {
+    "height": "Body Height",
+    "weight": "Body Weight",
+    "bmi": "Body mass index (BMI) [Ratio]",
+    "sbp": "Systolic Blood Pressure",
+    "dbp": "Diastolic Blood Pressure",
+    "hr": "Heart rate",
+    "rr": "Respiratory rate",
+    "glucose": "Glucose [Mass/volume] in Blood",
+    "hba1c": "Hemoglobin A1c/Hemoglobin.total in Blood",
+    "chol": "Cholesterol [Mass/volume] in Serum or Plasma",
+    "hdl": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+    "ldl": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+    "egfr": "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M",
+    "creat": "Creatinine [Mass/volume] in Blood"
+  },
+  "encounter_classes": [
+    "wellness",
+    "ambulatory",
+    "emergency",
+    "inpatient",
+    "urgentcare"
+  ],
+  "d1_shape": [
+    2174,
+    51
+  ],
+  "d2_shape": [
+    1968,
+    51
+  ]
+}
